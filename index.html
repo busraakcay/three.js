@@ -1,13 +1,119 @@
 <!DOCTYPE html>
-<html>
-  <head lang="en">
-    <meta charset="utf-8" />
-    <title>Three.js App</title>
-	<link rel="stylesheet" href="src/style/app.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Js</title>
+    <link rel="stylesheet" href="src/style/app.css" />
+    <script type="module" src="src/js/main.js"></script>
   </head>
   <body>
-    <script type="module" src="src/js/main.js"></script>
-    <div id="container"></div>
-    <div id="info">Three.js Examples</div>
+    <header>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section id="home">
+      <div class="floating-objects">
+        <!-- <div class="circle"></div> -->
+        <div id="model" class="model"></div>
+      </div>
+      <div class="container reveal">
+        <div class="hero">
+          <div class="moving-text">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p class="subtext">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button class="moving-button">Lorem, ipsum.</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container reveal">
+        <h2>About</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Quam blanditiis,
+              officiis, voluptate quisquam aperiam nobis est, quis neque esse
+              soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
+              accusamus doloremque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est
+              rerum id quis eaque rem suscipit reprehenderit quaerat vero
+              nesciunt?
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatum, eaque voluptatibus. Eaque tempore quam nesciunt. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Eum adipisci
+              blanditiis assumenda atque officiis? Vel, fuga facilis quia
+              reprehenderit nihil optio harum. Quo sapiente veniam atque
+              corporis tempora non repellat?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container reveal">
+        <h2>Services</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>Section text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container reveal">
+        <h2>Contact</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="src/js/app.js"></script>
   </body>
 </html>

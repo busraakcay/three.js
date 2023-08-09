@@ -1,12 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #42455a;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #00c2cb;
+}
+header nav a {
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: #e0ffff;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+header nav a:hover,
+header nav a.active {
+  background: #00c2cb;
+  color: #42455a;
+  transition: 0.5s ease-out;
+  letter-spacing: 2px;
+}
 body {
+  background: #42455a;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) {
+  color: #e0ffff;
+}
+section:nth-child(2) {
+  color: #42455a;
+  background: #e0ffff;
+}
+section:nth-child(3) {
+  color: #e0ffff;
+}
+section:nth-child(4) {
+  color: #42455a;
+  background: #e0ffff;
+}
+section:nth-child(5) {
+  color: #e0ffff;
+}
+section .container {
+  margin: 100px;
+}
+section h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container {
+  display: flex;
+}
+section .text-container .text-box {
+  margin: 20px;
+  padding: 20px;
+  background: #00c2cb;
+}
+section .text-container .text-box h3 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 48px;
   margin: 0;
 }
-#info {
+
+.hero .subtext {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.moving-text {
+  font-size: 32px;
+  color: #555;
+  animation: moveObject 2s linear infinite;
+}
+
+.moving-button {
+  position: relative;
+  background-color: #00c2cb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 20px;
+}
+
+.moving-button:hover {
+  transform: translateX(10px);
+}
+
+.floating-objects {
   position: absolute;
-  top: 10px;
   width: 100%;
-  text-align: center;
-  z-index: 100;
-  display: block;
-  color: white;
+  height: 100%;
+}
+
+.model {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: moveObject 2s linear infinite;
+}
+
+@keyframes moveModel {
+  0% {
+    top: -100px;
+    left: 50%;
+  }
+  50% {
+    top: 100%;
+    left: 25%;
+  }
+  100% {
+    top: -100px;
+    left: 75%;
+  }
+}
+
+@keyframes translateModel {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateModel {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveObject {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: moveModel 6s linear infinite, rotateModel 10s linear infinite;
 }

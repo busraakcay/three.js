@@ -56,7 +56,6 @@ const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
 const line = new THREE.Line(lineGeometry, lineMaterial);
 
 //Line - Red
-
 const lineMaterialRed = new THREE.LineBasicMaterial({ color: 0xfc0317 });
 const pointsRed = [];
 pointsRed.push(new THREE.Vector3(-1, 1, 0));
